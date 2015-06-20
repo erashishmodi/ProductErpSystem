@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <!--NAVIGATION START-->
+        <div class="row navigation ">
+            <nav >
+                <ul>
+                    <li role="presentation"><a class="nav-buttons" href="#">Home</a></li>
+                    <li role="presentation"><a class="nav-buttons" href="#">About</a></li>
+                    <li role="presentation"><a class="nav-buttons" href="#">Contact</a></li>
+                    <li role="presentation"><a class="nav-buttons" href="#">Other</a></li>
+                </ul>
+                <ul class="right">
+                    <li role="presentation"><a class="nav-buttons" href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Login</a></li>
+                </ul>
+            </nav> 
+        </div>
+        <!--NAVIGATION END.-->
+        <!--HEADING START-->
+        <div class="row border-bottom five-pad divider-bottom">
+            <div class="col-md-12">
+                <div class="col-md-2">
+                    <div class="brand-logo">
+                        <img class="brand-logo" alt="brand-logo"src="~/Content/images.jpg"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1>Shiv Infosystem.</h1>
+                </div>
+            </div>
+        </div>
+        <!--HEADING END.-->
+        <!--PAGE BODY START.-->
+        <div class="row">
+            <div class="col-md-12" id="page">
+                <!--RIGHT SIDE PANEL START.-->
+                <div class="col-md-2 border-left">
+                    <ul>
+                        <li><a href="#">Link1</a></li>
+                        <li><a href="#">Link1</a></li>
+                        <li><a href="#">Link1</a></li>
+                        <li><a href="#">Link1</a></li>
+                    </ul>
+                </div>
+                <!--RIGHT SIDE PANEL END.-->
+                <!-- CONTENT PANEL START.-->
+                <div class="col-md-10 border-left border-right">
+                   @RenderBody()
+                </div>
+                <!--CONTENT  PANEL END.-->
+            </div>
+        </div>
+        <!--PAGE BODY END.-->
+        <!--PAGE FOOTER-->
+        <div class="row divider-top">
+            <div class="col-md-12">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <p class="ftr-text">&copy;@DateTime.Now.Year - Shiv Info Solution &reg;</p>
+                </div>
+            </div>
+        </div>
+        <!--PAGE FOOTER END.-->
+    </div>
+</body>
+</html>

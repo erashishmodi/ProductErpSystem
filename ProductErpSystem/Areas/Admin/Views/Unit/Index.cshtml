@@ -1,0 +1,40 @@
+﻿@using Antlr.Runtime.Tree
+@model IEnumerable<ProductErpSystem.Areas.Admin.Models.UnitViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="panel-title">Show Units</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered table-hover table-responsive">
+            <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.UnitId)</th>
+                <th>@Html.DisplayNameFor(model => model.UnitName)</th>
+                <th>@Html.DisplayNameFor(model => model.IsDeleted)</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.UnitId</td>
+                    <td>@item.UnitName</td>
+                    <td>@item.IsDeleted</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {Id = item.UnitId},new {@class="btn btn-warning"})
+                        @Html.ActionLink("Delete", "Delete", new {Id = item.UnitId},new{@class="btn btn-danger"})
+                    </td>
+                </tr>
+            }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
