@@ -71,4 +71,5 @@
     FOREIGN KEY ([OrderId]) REFERENCES CustomerOrder([OrderId]),
     FOREIGN KEY ([ProductId]) REFERENCES [Product] ([ProductId])
 );
+re think the other erp related tables.
 
